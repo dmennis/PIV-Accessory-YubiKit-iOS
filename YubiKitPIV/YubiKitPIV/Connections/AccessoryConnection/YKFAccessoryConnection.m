@@ -32,8 +32,6 @@
 #import "YKFSmartCardInterface.h"
 #import "YKFPIVSession+Private.h"
 #import "YKFAccessoryDescription+Private.h"
-#import "YKFManagementSession+Private.h"
-#import "YKFManagementSession.h"
 
 #import "EAAccessory+Testing.h"
 #import "EASession+Testing.h"
@@ -123,15 +121,6 @@ static NSTimeInterval const YubiAccessorySessionStreamOpenDelay = 0.2; // second
     [self.currentSession clearSessionState];
     [YKFPIVSession sessionWithConnectionController:self.connectionController
                                         completion:^(YKFPIVSession *_Nullable session, NSError * _Nullable error) {
-        self.currentSession = session;
-        callback(session, error);
-    }];
-}
-
-- (void)managementSession:(YKFManagementSessionCompletion _Nonnull)callback {
-    [self.currentSession clearSessionState];
-    [YKFManagementSession sessionWithConnectionController:self.connectionController
-                                                  completion:^(YKFManagementSession *_Nullable session, NSError * _Nullable error) {
         self.currentSession = session;
         callback(session, error);
     }];

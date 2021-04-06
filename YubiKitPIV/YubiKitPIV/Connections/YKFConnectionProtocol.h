@@ -23,13 +23,6 @@ typedef void (^YKFPIVSessionCompletionBlock)(YKFPIVSession *_Nullable, NSError* 
 ///                   the YubiKey. This handler is executed on a background thread.
 - (void)pivSession:(YKFPIVSessionCompletionBlock _Nonnull)completion;
 
-typedef void (^YKFManagementSessionCompletion)(YKFManagementSession *_Nullable, NSError* _Nullable);
-
-/// @abstract Returns a YKFManagementSession for interacting with the Management application on the YubiKey.
-/// @param completion The completion handler that gets called once the application is selected on
-///                   the YubiKey. This handler is executed on a background thread.
-- (void)managementSession:(YKFManagementSessionCompletion _Nonnull)completion;
-
 /// @abstract The smart card interface to the YubiKey.
 /// @discussion Use this for communicating with the YubiKey by sending APDUs to the it. Only use this
 ///             when none of the supplied sessions can be used.

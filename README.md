@@ -10,7 +10,7 @@ The YubiKit SDK for iOS is available Swift Package Manger (SPM). SPM is a depend
 
 Open Xcode and click "File" -> "Swift Packages" -> "Add Package Dependency..."
 
-Paste the following URL: https://github.com/dmennis/PIV-Accessory-YubiKit-iOS
+Paste the following URL: https://github.com/YubicoLabs/PIV-Accessory-YubiKit-iOS
 
 Click "Next" -> "Next" -> "Finish"
 
